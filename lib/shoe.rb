@@ -9,9 +9,11 @@ class Shoe
   def initialize(brand)
     @brand = brand
 
-    if !BRANDS.include?(brand) #the array does not include the value add to the array
-      BRANDS << brand
-    end
+
+    BRANDS << brand unless BRANDS.include?(brand)
+    # if !BRANDS.include?(brand) #the array does not include the value add to the array
+    #   BRANDS << brand
+    # end
   end
 
   def cobble
